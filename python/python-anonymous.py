@@ -1,18 +1,12 @@
-# Example in Python 2
+"""python-anonymous.py: lists objects within a bucket"""
 import boto
 import boto.s3.connection
 
 conn = boto.connect_s3(
         anon=True,
-        host = 'datasets2.iccluster.epfl.ch',
+        host = 'datasets.iccluster.epfl.ch',
         #is_secure=False,               # uncomment if you are not using ssl
         calling_format = boto.s3.connection.OrdinaryCallingFormat(),
-        )
-
-for bucket in conn.get_all_buckets():
-        print "{name}\t{created}".format(
-                name = bucket.name,
-                created = bucket.creation_date
         )
 
 bucket_name = "reddit"
