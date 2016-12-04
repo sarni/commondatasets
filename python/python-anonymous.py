@@ -1,4 +1,9 @@
-"""python-anonymous.py: lists objects within a bucket"""
+#!/usr/bin/env python
+"""python-anonymous.py: lists all objects in a bucket on common datasets"""
+__author__ = "Sofiane Sarni"
+__license__ = "GPL"
+__version__ = "0.1"
+
 import boto
 import boto.s3.connection
 
